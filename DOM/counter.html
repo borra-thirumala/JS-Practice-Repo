@@ -1,0 +1,25 @@
+<DOCTYPE html>
+<html>
+    <head>
+        <h1 id="count">0</h1>
+    </head>
+    <body>
+        <button id="inc" onclick="inc()">Inc</button>
+        <button id="dec" onclick="dec()">Dec</button>
+    </body>
+    <script>
+        let count=0
+        function inc(){
+            count++;
+            document.getElementById("count").innerText=count;
+
+        }
+        function dec(){
+           if(count>0){
+            count--
+           }
+            document.getElementById("count").innerText=count;
+
+        }
+    </script>
+</html>
