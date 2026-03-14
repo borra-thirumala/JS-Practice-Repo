@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <h1 id="title">Hello World</h1>
+    </head>
+    <body>
+        <button id="btn" onClick="changetext()">Show</button>
+    </body>
+    <script>
+       function changetext(){
+         let element=document.getElementById("title");
+        let button = document.getElementById("btn");
+        if(button.innerText==="Show"){
+            element.innerText="Welcome to JS"
+            button.innerText="Hide Me"
+        }
+        else{
+            element.innerText="Hello World"
+            button.innerText="Show"
+        }
+       }
+    </script>
+</html>
