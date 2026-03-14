@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <h1>Displaying Items</h1>
+    </head>
+    <body>
+        <input type="text" id="test"/>
+        <button onclick="add()">Add</button>
+        <button onclick="del()">Del</button>
+        <ul id="list"></ul>
+    </body>
+    <script>
+        function add(){
+            let ele=document.getElementById("test").value
+            let x=document.createElement("li")
+            x.innerText=ele
+            document.getElementById("list").appendChild(x)
+        }
+        function del(){
+            let list=document.getElementById("list")
+            if(list.lastElementChild){
+                list.removeChild(list.lastElementChild)
+            }
+        }
+    </script>
+</html>
