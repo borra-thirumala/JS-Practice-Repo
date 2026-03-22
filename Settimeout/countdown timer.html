@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Countdown</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial;
+      margin-top: 100px;
+    }
+
+    #count {
+      font-size: 40px;
+      color: red;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Countdown</h1>
+  <div id="count">10</div>
+
+  <script>
+    let count = 10;
+
+    function update() {
+      if (count === 0) return;
+
+      count--;
+      document.getElementById("count").innerText = count;
+
+      setTimeout(update, 1000);
+    }
+
+    setTimeout(update, 1000);
+  </script>
+
+</body>
+</html>
