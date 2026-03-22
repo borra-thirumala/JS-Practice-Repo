@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Spinner
+        </title>
+        <style>
+            .loader{
+                border:5px solid lightgray;   
+                border-top:5px solid blue;
+                width:50px;
+                height:50px;
+                animation:spin 1s linear infinite;
+                margin:auto;
+                border-radius:50%;
+            }
+            @keyframes spin{
+                0%{transform:rotate(0deg);}
+                100% {transform:rotate(360deg);}
+            }
+            .hidden{
+                display:none
+            }
+            .content{
+                font-size:20px;
+                color:green;
+            }
+        </style>
+    </head>
+    <div id="loader" class="loader"></div>
+    <div id="content" class="content hidden">Data fetched successfully</div>
+    <script>
+        setTimeout(()=>{
+            document.getElementById("loader").classList.add("hidden");
+            document.getElementById("content").classList.remove("hidden");
+        },3000)
+    </script>
+</html>
